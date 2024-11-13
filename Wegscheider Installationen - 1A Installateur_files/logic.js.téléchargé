@@ -1,0 +1,21 @@
+// logic.js
+
+jQuery(document).ready(function() {
+	
+	console.log("hello");
+
+
+	jQuery(".mobilemenu_trigger").click(function(f){
+		jQuery('#main_menu_mobile_wrapper').slideToggle();
+		f.preventDefault();
+	});		
+	
+	
+	jQuery(window).resize(function(e){	
+		if (!jQuery('.mobilemenu_trigger').is(":visible")) {
+			jQuery('#main_menu_mobile_wrapper').hide();
+		}	
+	}).trigger('resize'); 
+	
+	
+});
